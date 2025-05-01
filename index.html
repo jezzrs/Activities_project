@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why learning is the best hobby?</title>
+    <style>
+      body {
+        background: linear-gradient(
+          160deg,
+          rgb(229, 204, 235) 0%,
+          rgb(139, 102, 241) 100%
+        );
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .darkButton button {
+        letter-spacing: 3px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        display: block;
+        margin: 0 auto;
+        background-color: black;
+        color: white;
+        font-size: 10px;
+        border-radius: 6px;
+        padding: 10px 15px;
+      }
+
+      .darkButton button:hover {
+        color: black;
+        background: white;
+        font-size: 10px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 120ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .calendarButton button {
+        letter-spacing: 3px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        align-content: center;
+        display: block;
+        margin-left: 180px;
+        margin-top: 30px;
+        background-color: #7c33b7;
+        color: white;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px 15px;
+      }
+      .calendarButton button:hover {
+        color: rgb(255, 255, 255);
+        background: #bb00ff;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 120ms ease-in-out;
+        cursor: pointer;
+      }
+
+      img {
+        border-radius: 20pt;
+      }
+
+      .bigImage img {
+        display: block;
+        width: 670px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .bigImage img:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: all 120ms ease-in-out;
+      }
+      .grid img {
+        display: block;
+        margin: 0 auto;
+        width: 160px;
+        height: 100px;
+      }
+
+      .grid img:hover {
+        filter: contrast(80%);
+        transform: scale(1.4);
+        cursor: pointer;
+        align-content: center;
+        transition: all 120ms ease-in-out;
+      }
+      .grid {
+        display: grid;
+        margin: 15px 45px;
+        width: 600px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+      }
+      .box {
+        background-color: rgb(231, 225, 247, 75%);
+        margin: 0 auto;
+        width: 700px;
+        border-radius: 15pt;
+      }
+
+      h1 {
+        text-align: center;
+        color: #5d29e1;
+        letter-spacing: 10pt;
+        padding-top: 30px;
+      }
+
+      .subtitle {
+        text-align: center;
+      }
+      .text {
+        text-align: justify;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding-bottom: 20pt;
+        line-height: 1.8;
+      }
+      h2 {
+        color: #ae51fa;
+        letter-spacing: 4pt;
+        line-height: normal;
+      }
+      #snailImage {
+        text-align: center;
+        display: none;
+      }
+      .seeYou h2 {
+        text-align: center;
+        color: #9618fe;
+        letter-spacing: 2pt;
+      }
+      .invisible h2 {
+        text-align: center;
+        color: #9618fe;
+        letter-spacing: 2pt;
+        display: none;
+      }
+
+      footer {
+        padding: 20pt;
+        font-size: smaller;
+        text-align: center;
+      }
+      .darkTheme {
+        background: linear-gradient(
+          160deg,
+          rgb(10, 0, 12) 0%,
+          rgb(66, 40, 139) 100%
+        );
+      }
+      .darkTheme .box {
+        background-color: rgba(0, 0, 0, 20%);
+      }
+      .darkTheme h1 {
+        color: rgba(255, 255, 255, 0.91);
+      }
+
+      .darkTheme h2 {
+        color: white;
+      }
+      .darkTheme .text {
+        color: #e7e1f7;
+      }
+      .darkTheme footer {
+        color: #edddf2;
+      }
+      .darkTheme a {
+        color: white;
+      }
+      .darkTheme .darkButton button {
+        color: black;
+        background-color: white;
+        font-size: 10px;
+        border-radius: 6px;
+        padding: 10px 15px;
+      }
+      .darkTheme .darkButton button:hover {
+        color: white;
+        background-color: black;
+        font-size: 10px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 120ms ease-in-out;
+        cursor: pointer;
+      }
+      .darkTheme .calendarButton button {
+        background-color: #ae51fa;
+        color: white;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px 15px;
+      }
+      .darkTheme .calendarButton button:hover {
+        color: rgb(255, 255, 255);
+        background: #634af3;
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 120ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .darkTheme .seeYou h2 {
+        text-align: center;
+        color: #eee2f9;
+        letter-spacing: 2pt;
+      }
+
+      .darkTheme .invisible h2 {
+        text-align: center;
+        color: #eee2f9;
+        letter-spacing: 2pt;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="darkButton">
+      <button><div class="buttonText">Dark theme 🌙</div></button>
+    </div>
+    <div class="box">
+      <h1>💡Learning💡</h1>
+      <div class="subtitle"><h2>📖 The best hobby 📖</h2></div>
+      <div class="bigImage">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/719/original/shutterstock_1220130721_%281%29.jpg?1721135584"
+          alt="A woman studying"
+        />
+      </div>
+      <div class="grid">
+        <img
+          class="swimPicture"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/717/original/sitemgr_Aqua-Bliss-adult-learning-article3.png?1721135541"
+          alt="An adult learning to swim"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/185/original/hqdefault.jpg?1721321805"
+          alt="An adult learning to skate on a skateboard"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/210/original/sewing.jpg?1721326522"
+          alt="Two women learning how to sew"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/211/original/Coding_Blog_Header_1500x750-606x303.jpg.optimal.jpg?1721326532"
+          alt="Woman learning how to code"
+        />
+      </div>
+
+      <div class="text">
+        <p>
+          Learning is the process of acquiring new understanding, knowledge,
+          behaviors, skills, values, attitudes, and preferences. <br />
+          Human learning starts at birth and continues until death as a
+          consequence of ongoing interactions between people and their
+          environment.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Learning" target="_blank">
+          Read more about the process of learning</a
+        >
+
+        <h2>How can learning be a hobby?</h2>
+        <p>
+          A hobby counts as any activity that you do outside of your occupation
+          for enjoyment. Learning is so much more than cramming for math or
+          science classes that you might not be interested in. Learning happens
+          every day as you get better at completing different tasks. Focusing on
+          improving and learning in several areas is a fantastic hobby to have.
+          You can learn about various topics, be it specific interests,
+          creativity, social elements, or even physical activities.
+        </p>
+        <p>
+          <a
+            href="https://www.skillgrowthpro.com/is-learning-a-hobby/#Heres_why_learning_is_a_hobby"
+            target="_blank"
+          >
+            Read more about learning as a hobby
+          </a>
+        </p>
+        <div class="seeYou invisible">
+          <h2>We hope yo see you soon!</h2>
+        </div>
+        <div id="snailImage">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/833/original/unnamed.png?1721656245"
+            alt="Emoji of snail celebrating"
+            width="150px"
+          />
+        </div>
+        <div class="calendarButton">
+          <button>Get the calendar of activities</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Coded by
+      <a href="https://www.instagram.com/d3j4.r3v3" target="_blank"
+        >Jezz Ramirez 🐌</a
+      >
+      with HTML, CSS and JavaScript
+    </footer>
+
+    <script>
+      function ChangeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("darkTheme")) {
+          body.classList.remove("darkTheme");
+        } else {
+          body.classList.add("darkTheme");
+        }
+      }
+
+      function changeButton() {
+        let body = document.querySelector("body");
+        let buttonText = document.querySelector(".buttonText");
+        if (body.classList.contains("darkTheme")) {
+          buttonText.innerHTML = "Light theme ☀️";
+        } else {
+          buttonText.innerHTML = "Dark theme 🌙";
+        }
+      }
+
+      let buttonTheme = document.querySelector("button");
+      buttonTheme.addEventListener("click", function () {
+        ChangeTheme();
+        changeButton();
+      });
+
+      function requestCalendar() {
+        let name = prompt(" Please tell us your what's your name?");
+        let age = prompt("What is your age?");
+        let mail = prompt(
+          "To which email should we send our calendar of activities?"
+        );
+        if (age > 18) {
+          alert(
+            "Well done, " +
+              name +
+              "! We will send you the calendar of activities for adults to " +
+              mail +
+              "📨"
+          );
+        } else {
+          alert(
+            "Well done, " +
+              name +
+              "! We will send you the calendar of activities for kids and teenagers to " +
+              mail +
+              "📨"
+          );
+        }
+        document.getElementById("snailImage").style.display = "block";
+      }
+
+      function displayTextElement() {
+        let body = document.querySelector("body");
+        let displayTextElement = document.querySelector(".invisible");
+
+        displayTextElement.classList.remove("invisible");
+      }
+
+      let buttonCalendar = document.querySelector(".calendarButton");
+      buttonCalendar.addEventListener("click", function () {
+        requestCalendar();
+        displayTextElement();
+      });
+    </script>
+  </body>
+</html>
